@@ -1,0 +1,39 @@
+# Environment Setup ----
+
+# Conda Environment Setup Instructions ----
+#  - Using an environment.yml file with conda
+#  - Key Terminal Commands:
+# 
+#    conda env create -f 000_environment_setup/01_conda_environment.yml
+#    conda env update --file 000_environment_setup/01_conda_environment.yml --prune
+#    conda env export --name hotel_bookings > envname.yml
+#    conda env remove --name hotel_bookings
+#    conda env list
+
+
+name: hotel_bookings
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pandas
+  - scikit-learn
+  - statsmodels
+  - xgboost
+  - plotly
+  - matplotlib
+  - graphviz
+  - ipykernel
+  - nbformat
+  - pip
+  - pip:
+      - plotnine
+      - pycaret
+      - causalml
+      - pandas==1.5.3
+      - scikit-learn==0.24.2
+      - missingno
+      - git+https://github.com/business-science/pytimetk.git
+      
